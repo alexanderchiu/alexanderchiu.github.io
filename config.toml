@@ -1,0 +1,162 @@
+
+baseURL = "https://alexanderchiu.github.io"
+languageCode = "en-us"
+theme = "aafu"
+
+[build]
+  writeStats = true
+
+[params]
+    title = "Alexander Chiu"
+    author = "Alexander Chiu"
+    description = "Website title"
+    copyright = ""
+
+    [params.theme]
+        # Available themes are 'light', 'dark', 'ocean', and 'pinkish'
+        mainTheme = "light"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = true
+        singlePage = false
+
+    [params.favicons]
+        use = true
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Alexander Chiu"
+        tagline = "Senior Software Engineer"
+        location = "Utrecht, NL"
+        photo = "profile.jpg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            icon = "fab fa-linkedin-in"
+            url = "https://www.linkedin.com/in/chiualexander/"
+            title = "LinkedIn"
+        [[params.social.list]]
+            icon = "fab fa-github"
+            url = "https://github.com/alexanderchiu/"
+            title = "GitHub"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "experience"
+    [[params.showInAccordion]]
+        item = "education"
+    [[params.showInAccordion]]
+        item = "publication"
+    [[params.showInAccordion]]
+        item = "project"
+    [[params.showInAccordion]]
+        item = "hobby"
+
+    [params.aboutme]
+        title = "About Me"
+        icon = "fas fa-user fa-fw"
+        description = """Originally from Cape Town, South Africa - I now work
+        and reside in the Netherlands with my wife. After completing an undergraduate
+        degree in electronic engineering from Stellenbosch University, I pursued a
+        research master's in computer vision and autonomous navigation applications
+        where I developed a novel outlier removal technique. My first full-time job was
+        a five year stint in the telecommunications industry working on big data
+        solutions for national governments and the law enforcement community. Since
+        December 2021 I have been working at bol.com applying my skills in software,
+        data engineering and machine learning solving problems in the search and
+        recommendations domain."""
+
+    # Experience section
+    [params.experience]
+        title = "Experience"
+        icon = "fas fa-briefcase fa-fw"
+
+        [[params.experience.list]]
+            position = "Senior Engineer"
+            dates = "December 2021 - *Present*"
+            company = "bol.com"
+            details = """Part of the Help me find product responsible for search
+            suggestions, recommendations, query understanding and measuring
+            search-related KPIs."""
+            [[params.experience.list]]
+            position = "Junior/Medior/Senior Engineer"
+            dates = "January 2017 - November 2021"
+            company = "VASTech"
+            details = """Part of a data integration platform team developing
+            distributed and scalable big data solutions for national governments
+            and the international law enforcement community."""
+        [[params.experience.list]]
+            position = "Intern"
+            dates = "December 2015"
+            company = "S-PLANE Automation"
+            details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
+        [[params.experience.list]]
+            position = "Intern"
+            dates = "December 2014 - January 2015"
+            company = "VASTech"
+            details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."
+
+    # Education section
+    [params.education]
+        title = "Education"
+        icon = "fas fa-graduation-cap fa-fw"
+        [[params.education.list]]
+            degree = "M.Eng. Electronic Engineering (Cum laude)"
+            college = "Stellenbosch University"
+            dates = "2015 - 2016"
+            thesis_title = "Probabilistic Outlier Removal for Stereo Visual Odometry"
+            thesis_url = "http://scholar.sun.ac.za/handle/10019.1/100964"
+        [[params.education.list]]
+            degree = "B.Eng. Electrical and Electronic Engineering (Cum laude)"
+            college = "Stellenbosch University"
+            dates = "2011 - 2014"
+
+    # Publication section
+    [params.publication]
+        title = "Publications"
+        icon = "fas fa-book fa-fw"
+        #The order below determines the order in which the items appear in "Publications" section
+        format = ["date", "authors", "title", "journal"]
+        #If you don't want to group publications, comment the line below by adding # at the beginning
+        [[params.publication.list]]
+            title = "A comparison of linearisation and the unscented transform for computer vision applications"
+            authors = "Chiu, A., Jones, T. and van Daalen, C.E"
+            date = "2016"
+            journal = "2016 Pattern Recognition Association of South Africa and Robotics and Mechatronics International Conference (PRASA-RobMech)"
+            url = "https://ieeexplore.ieee.org/abstract/document/7813159/"
+            type = "Proceedings"
+
+    # Project section
+    [params.project]
+        title = "Projects"
+        icon = "fas fa-project-diagram fa-fw"
+
+        [[params.project.list]]
+            title = "notsobigdatablog.com"
+            url = "https://www.notsobigdatablog.com/"
+            description = "Jekyll based machine learning blog powered by Netlify and Github actions."
+
+    # Hobby section
+    [params.hobby]
+        title = "Hobbies"
+        icon = "fas fa-gamepad fa-fw"
+
+        [[params.hobby.list]]
+            hobby = "Travel"
+        [[params.hobby.list]]
+            hobby = "Reading"
+        [[params.hobby.list]]
+            hobby = "Chess"
