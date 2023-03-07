@@ -90,7 +90,9 @@ theme = "aafu"
             company = "bol.com"
             details = """Part of the Help me find product responsible for search
             suggestions, recommendations, query understanding and measuring
-            search-related KPIs."""
+            search-related KPIs.
+            """
+            tech = "Java, Kotlin, Python, Gitlab, Kubernetes, Grafana, BigQuery, Dataflow, VertexAI"
             [[params.experience.list]]
             position = "Junior/Medior/Senior Engineer"
             dates = "January 2017 - November 2021"
@@ -98,16 +100,19 @@ theme = "aafu"
             details = """Part of a data integration platform team developing
             distributed and scalable big data solutions for national governments
             and the international law enforcement community."""
+            tech = "Java, Python, Maven, gRPC, Vertica, Jaeger, Elasticsearch, Docker, Grafana"
         [[params.experience.list]]
             position = "Intern"
             dates = "December 2015"
             company = "S-PLANE Automation"
             details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
+            tech = "C++, Python"
         [[params.experience.list]]
             position = "Intern"
             dates = "December 2014 - January 2015"
             company = "VASTech"
             details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."
+            tech = "Java, Python"
 
     # Education section
     [params.education]
