@@ -68,16 +68,17 @@ theme = "aafu"
     [params.aboutme]
         title = "About Me"
         icon = "fas fa-user fa-fw"
-        description = """Originally from Cape Town, South Africa - I now work
-        and reside in the Netherlands with my wife. After completing an undergraduate
-        degree in electronic engineering from Stellenbosch University, I pursued a
-        research master's in computer vision and autonomous navigation applications
-        where I developed a novel outlier removal technique. My first full-time job was
-        a five year stint in the telecommunications industry working on big data
-        solutions for national governments and the law enforcement community. Since
-        December 2021 I have been working at bol.com applying my skills in software,
-        data engineering and machine learning solving problems in the search and
-        recommendations domain."""
+        description = """Originally from Cape Town, South Africa - I now live in
+        the Netherlands with my wife. After completing an undergraduate degree
+        in electronic engineering from Stellenbosch University, I pursued a
+        master's degree focused on computer vision and autonomous navigation
+        applications. I spent five years in the telecommunications and
+        intelligence industry working on big data solutions for national
+        governments and the law enforcement community.
+
+        As of December 2021 I have been at bol.com applying my skills in
+        software, data, and machine learning engineering solving problems in the
+        search and recommendations domain."""
 
     # Experience section
     [params.experience]
@@ -88,11 +89,21 @@ theme = "aafu"
             position = "Senior Engineer"
             dates = "December 2021 - *Present*"
             company = "bol.com"
-            details = """Part of the Help me find product responsible for search
-            suggestions, recommendations, query understanding and measuring
-            search-related KPIs.
+            details = """Individual contributor of *Help Me Find* - a
+            product-led group of scrums teams that make sure customers are able
+            to find the relevant products (and ultimately buy) on the bol.com
+            platform. I have worked on projects that help guide customers such
+            as search suggestions and recommendations, as well as the internal
+            search engine where techniques like neural search and
+            learning-to-rank are combined with traditional information retrieval
+            techniques to improve the relevancy of search.
+
+            At the same time I am also a member of a company-wide machine
+            learning engineer workgroup. As part of this group I contribute to
+            developing example projects and documenting best practices to
+            streamline the process of taking machine learning models to
+            production within the bol.com landscape.
             """
-            tech = "Java, Kotlin, Python, Gitlab, Kubernetes, Grafana, BigQuery, Dataflow, VertexAI"
             [[params.experience.list]]
             position = "Junior/Medior/Senior Engineer"
             dates = "January 2017 - November 2021"
@@ -100,19 +111,16 @@ theme = "aafu"
             details = """Part of a data integration platform team developing
             distributed and scalable big data solutions for national governments
             and the international law enforcement community."""
-            tech = "Java, Python, Maven, gRPC, Vertica, Jaeger, Elasticsearch, Docker, Grafana"
         [[params.experience.list]]
-            position = "Intern"
+            position = "Internship"
             dates = "December 2015"
             company = "S-PLANE Automation"
             details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
-            tech = "C++, Python"
         [[params.experience.list]]
-            position = "Intern"
+            position = "Internship"
             dates = "December 2014 - January 2015"
             company = "VASTech"
             details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."
-            tech = "Java, Python"
 
     # Education section
     [params.education]
