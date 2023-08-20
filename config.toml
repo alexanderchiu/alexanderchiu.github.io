@@ -161,6 +161,10 @@ theme = "aafu"
             title = "notsobigdatablog.com"
             url = "https://www.notsobigdatablog.com/"
             description = "Jekyll based machine learning blog powered by Netlify and Github actions."
+        [[params.project.list]]
+            title = "Find My Sponsor"
+            url = "https://fms.alexanderchiu.dev"
+            description = "Basic search project built with Typesense, FastAPI and Google App Engine"
 
     # Hobby section
     [params.hobby]
