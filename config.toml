@@ -4,24 +4,24 @@ languageCode = "en-us"
 theme = "aafu"
 
 [build]
-  writeStats = true
+writeStats = true
 
 [params]
-    title = "Alexander Chiu"
-    author = "Alexander Chiu"
-    description = "Website title"
-    copyright = ""
+title = "Alexander Chiu"
+author = "Alexander Chiu"
+description = "Website title"
+copyright = ""
 
-    [params.theme]
-        # Available themes are 'light', 'dark', 'ocean', and 'pinkish'
-        mainTheme = "light"
-        # setting false below will hide 'aafu by darshan' displayed under the profile pic
-        showAttribute = true
-        singlePage = false
+[params.theme]
+# Available themes are 'light', 'dark', 'ocean', and 'pinkish'
+mainTheme = "ocean"
+# setting false below will hide 'aafu by darshan' displayed under the profile pic
+showAttribute = false
+singlePage = true
 
-    [params.favicons]
-        use = true
-        metas = '''
+[params.favicons]
+use = true
+metas = '''
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -30,45 +30,45 @@ theme = "aafu"
         <link rel="shortcut icon" href="favicon.ico">
         '''
 
-    # Profile section
-    [params.profile]
-        name = "Alexander Chiu"
-        tagline = "Senior Software Engineer"
-        location = "Cape Town, ZA"
-        photo = "profile.jpg"
+# Profile section
+[params.profile]
+name = "Alexander Chiu"
+tagline = "Staff Engineer Data Infrastructure"
+location = "Cape Town, ZA"
+photo = "profile.jpg"
 
-    # Section for links to social websites
-    [params.social]
-        title = "Links"
+# Section for links to social websites
+[params.social]
+title = "Links"
 
-        [[params.social.list]]
-            icon = "fab fa-linkedin-in"
-            url = "https://www.linkedin.com/in/chiualexander/"
-            title = "LinkedIn"
-        [[params.social.list]]
-            icon = "fab fa-github"
-            url = "https://github.com/alexanderchiu/"
-            title = "GitHub"
+[[params.social.list]]
+icon = "fab fa-linkedin-in"
+url = "https://www.linkedin.com/in/chiualexander/"
+title = "LinkedIn"
+[[params.social.list]]
+icon = "fab fa-github"
+url = "https://github.com/alexanderchiu/"
+title = "GitHub"
 
-    #Specify what is showin in the Accordion
-    [[params.showInAccordion]]
-        item = "aboutme"
-        expand = true   # true for the section that is initially expanded
-    [[params.showInAccordion]]
-        item = "experience"
-    [[params.showInAccordion]]
-        item = "education"
-    [[params.showInAccordion]]
-        item = "publication"
-    [[params.showInAccordion]]
-        item = "project"
-    [[params.showInAccordion]]
-        item = "hobby"
+#Specify what is showin in the Accordion
+[[params.showInAccordion]]
+item = "aboutme"
+expand = true    # true for the section that is initially expanded
+[[params.showInAccordion]]
+item = "experience"
+[[params.showInAccordion]]
+item = "education"
+[[params.showInAccordion]]
+item = "publication"
+[[params.showInAccordion]]
+item = "project"
+[[params.showInAccordion]]
+item = "hobby"
 
-    [params.aboutme]
-        title = "About Me"
-        icon = "fas fa-user fa-fw"
-        description = """After completing an undergraduate degree
+[params.aboutme]
+title = "About Me"
+icon = "fas fa-user fa-fw"
+description = """After completing an undergraduate degree
         in electronic engineering from Stellenbosch University, I pursued a
         master's degree focused on computer vision and autonomous navigation
         applications. I spent five years in the telecommunications and
@@ -82,103 +82,95 @@ theme = "aafu"
         the ground up.
         """
 
-    # Experience section
-    [params.experience]
-        title = "Experience"
-        icon = "fas fa-briefcase fa-fw"
+# Experience section
+[params.experience]
+title = "Experience"
+icon = "fas fa-briefcase fa-fw"
 
-        [[params.experience.list]]
-            position = "Senior Data Engineer"
-            dates = "January 2024 - *Present*"
-            company = "primer.io"
-        [[params.experience.list]]
-            position = "Senior Engineer"
-            dates = "December 2021 - December 2023"
-            company = "bol.com"
-            details = """Individual contributor of *Help Me Find* - a
-            product-led group of scrums teams that make sure customers are able
-            to find the relevant products (and ultimately buy) on the bol.com
-            platform. I worked on projects that help guide customers such as
-            search suggestions and recommendations, as well as the internal
-            search engine where techniques like neural search and
-            learning-to-rank are combined with traditional information retrieval
-            techniques to improve the relevancy of search.
+[[params.experience.list]]
+positions = [
+  { position = "Staff Engineer", dates = "April 2025 - Present" },
+  { position = "Senior Data Engineer", dates = "January 2024 - March 2025" },
+]
+dates = "January 2024 - *Present*"
+company = "primer.io"
+details = """Member of the Data Infrastructure team at Primer – the world’s
+first Unified Payment Infrastructure that empowers businesses to transform their
+payment processes. I contribute to building and scaling the internal data
+platform, enabling teams across the company to easily produce, access, and work
+with data in an efficient and reliable way.
 
-            I was also a member of a company-wide machine learning engineer
-            workgroup where I contributed to best practices to streamline the
-            process of taking machine learning models to production within the
-            bol.com landscape.
-            """
-        [[params.experience.list]]
-            position = "Junior/Medior/Senior Engineer"
-            dates = "January 2017 - November 2021"
-            company = "VASTech"
-            details = """Part of a data integration platform team developing
+During this time I served as a technical lead on several data and machine
+learning initiatives, as well as a guild lead responsible for ensuring our
+engineering practices stay modern and effective."""
+[[params.experience.list]]
+positions = [
+  { position = "Senior Software Engineer", dates = "July 2022 - December 2023" },
+  { position = "Software Engineer", dates = "December 2021 - June 2022" },
+]
+dates = "December 2021 - December 2023"
+company = "bol.com"
+details = """Individual contributor of Help Me Find - a product-led group of
+scrums teams that make sure customers are able to find the relevant products
+(and ultimately buy) on the bol platform. I worked on projects that help guide
+customers such as search suggestions and recommendations, as well as the
+internal search engine where techniques like neural search and learning-to-rank
+are combined with traditional information retrieval techniques to improve the
+relevancy of search.
+
+I was also a member of a company-wide machine learning engineer workgroup where
+I contributed to best practices to streamline the process of taking machine
+learning models to production within the bol.com landscape."""
+[[params.experience.list]]
+positions = [
+  { position = "Senior Engineer", dates = "April 2021 - November 2021" },
+  { position = "Engineer", dates = "March 2019 - March 2021" },
+  { position = "Junior Engineer", dates = "January 2017 - February 2019" }
+]
+company = "VASTech"
+details = """Part of a data integration platform team developing
             distributed and scalable big data solutions for national governments
             and the international law enforcement community."""
-        [[params.experience.list]]
-            position = "Internship"
-            dates = "December 2015"
-            company = "S-PLANE Automation"
-            details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
-        [[params.experience.list]]
-            position = "Internship"
-            dates = "December 2014 - January 2015"
-            company = "VASTech"
-            details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."
+[[params.experience.list]]
+positions = [
+  { position = "Internship", dates = "December 2015" },
+]
+dates = "December 2015"
+company = "S-PLANE Automation"
+details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
+[[params.experience.list]]
+positions = [
+  { position = "Internship", dates = "December 2014 - January 2015" },
+]
+company = "VASTech"
+details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."
 
-    # Education section
-    [params.education]
-        title = "Education"
-        icon = "fas fa-graduation-cap fa-fw"
-        [[params.education.list]]
-            degree = "M.Eng. Electronic Engineering (Cum laude)"
-            college = "Stellenbosch University"
-            dates = "2015 - 2016"
-            thesis_title = "Probabilistic Outlier Removal for Stereo Visual Odometry"
-            thesis_url = "http://scholar.sun.ac.za/handle/10019.1/100964"
-        [[params.education.list]]
-            degree = "B.Eng. Electrical and Electronic Engineering (Cum laude)"
-            college = "Stellenbosch University"
-            dates = "2011 - 2014"
+# Education section
+[params.education]
+title = "Education"
+icon = "fas fa-graduation-cap fa-fw"
+[[params.education.list]]
+degree = "M.Eng. Electronic Engineering (Cum laude)"
+college = "Stellenbosch University"
+dates = "2015 - 2016"
+thesis_title = "Probabilistic Outlier Removal for Stereo Visual Odometry"
+thesis_url = "http://scholar.sun.ac.za/handle/10019.1/100964"
+[[params.education.list]]
+degree = "B.Eng. Electrical and Electronic Engineering (Cum laude)"
+college = "Stellenbosch University"
+dates = "2011 - 2014"
 
-    # Publication section
-    [params.publication]
-        title = "Publications"
-        icon = "fas fa-book fa-fw"
-        #The order below determines the order in which the items appear in "Publications" section
-        format = ["date", "authors", "title", "journal"]
-        #If you don't want to group publications, comment the line below by adding # at the beginning
-        [[params.publication.list]]
-            title = "A comparison of linearisation and the unscented transform for computer vision applications"
-            authors = "Chiu, A., Jones, T. and van Daalen, C.E"
-            date = "2016"
-            journal = "2016 Pattern Recognition Association of South Africa and Robotics and Mechatronics International Conference (PRASA-RobMech)"
-            url = "https://ieeexplore.ieee.org/abstract/document/7813159/"
-            type = "Proceedings"
-
-    # Project section
-    [params.project]
-        title = "Projects"
-        icon = "fas fa-project-diagram fa-fw"
-
-        [[params.project.list]]
-            title = "notsobigdatablog.com"
-            url = "https://www.notsobigdatablog.com/"
-            description = "Jekyll based machine learning blog powered by Netlify and Github actions."
-        [[params.project.list]]
-            title = "Find My Sponsor"
-            url = "https://fms.alexanderchiu.dev"
-            description = "Basic search project built with Typesense, FastAPI and Google App Engine"
-
-    # Hobby section
-    [params.hobby]
-        title = "Hobbies"
-        icon = "fas fa-gamepad fa-fw"
-
-        [[params.hobby.list]]
-            hobby = "Travel"
-        [[params.hobby.list]]
-            hobby = "Reading"
-        [[params.hobby.list]]
-            hobby = "Chess"
+# Publication section
+[params.publication]
+title = "Publications"
+icon = "fas fa-book fa-fw"
+#The order below determines the order in which the items appear in "Publications" section
+format = ["date", "authors", "title", "journal"]
+#If you don't want to group publications, comment the line below by adding # at the beginning
+[[params.publication.list]]
+title = "A comparison of linearisation and the unscented transform for computer vision applications"
+authors = "Chiu, A., Jones, T. and van Daalen, C.E"
+date = "2016"
+journal = "2016 Pattern Recognition Association of South Africa and Robotics and Mechatronics International Conference (PRASA-RobMech)"
+url = "https://ieeexplore.ieee.org/abstract/document/7813159/"
+type = "Proceedings"
