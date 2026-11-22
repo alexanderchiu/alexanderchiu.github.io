@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="block" aria-labelledby="list-h">
+  <h1 id="list-h" class="side">{{ .Title }}</h1>
+  <div>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    {{ with .Pages }}{{ partial "writing-list.html" . }}{{ else }}<p class="muted">Nothing here yet.</p>{{ end }}
+    {{ with .OutputFormats.Get "rss" }}<p class="more"><a href="{{ .RelPermalink }}">Subscribe by RSS</a></p>{{ end }}
+  </div>
+</section>
+{{ end }}

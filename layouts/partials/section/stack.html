@@ -1,0 +1,10 @@
+{{ with site.Data.stack.groups }}
+<section id="stack" class="block" aria-labelledby="stack-h">
+  <h2 id="stack-h" class="side">Stack</h2>
+  <div>
+    <dl class="stack-list">
+      {{ range . }}<dt>{{ .name }}</dt><dd>{{ delimit .items ", " }}</dd>{{ end }}
+    </dl>
+  </div>
+</section>
+{{ end }}

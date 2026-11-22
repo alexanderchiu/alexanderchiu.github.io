@@ -1,0 +1,14 @@
+<section id="study" class="block" aria-labelledby="education-h">
+  <h2 id="education-h" class="side">Education</h2>
+  <div>
+  {{ range site.Data.education.list }}
+    <article class="entry">
+      <h3>{{ .college }}</h3>
+      <ul class="roles"><li><span>{{ .degree }}</span> <span class="when">{{ partial "when.html" .dates }}</span></li></ul>
+      {{ with .details }}<div class="detail">{{ . | $.RenderString (dict "markup" "org" "display" "block") }}</div>{{ end }}
+      {{ range .papers }}<p class="stack">Peer-reviewed paper: {{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}{{ with .venue }}, {{ . }}{{ end }}</p>{{ end }}
+      {{ if .thesis_title }}<p class="stack">Thesis: {{ if .thesis_url }}<a href="{{ .thesis_url }}">{{ .thesis_title }}</a>{{ else }}{{ .thesis_title }}{{ end }}</p>{{ end }}
+    </article>
+  {{ end }}
+  </div>
+</section>

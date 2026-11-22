@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="block" aria-labelledby="post-h">
+  <div class="side">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    {{ with .Params.label }}<p class="kind">{{ . }}</p>{{ end }}
+  </div>
+  <div>
+    <h1 id="post-h" class="post-title">{{ .Title }}</h1>
+    <div class="prose">{{ .Content }}</div>
+    <p class="more"><a href="{{ (site.GetPage "writing").RelPermalink }}">All writing</a></p>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,15 @@
+{{ $p := site.Data.profile }}
+<header class="masthead">
+  {{ with $p.photo }}<img class="portrait" src="{{ "images/profile-small.jpg" | relURL }}" width="480" height="576" alt="Portrait of {{ $p.name }}">{{ end }}
+  {{ if .IsHome }}<h1 class="name">{{ $p.name }}</h1>{{ else }}<p class="name"><a href="{{ "/" | relURL }}">{{ $p.name }}</a></p>{{ end }}
+  <p class="tagline">{{ site.Params.tagline }}</p>
+  <p class="where">{{ $p.location }}, 33.92° S, 18.42° E<br><span id="clock">UTC+2</span></p>
+  <nav aria-label="Elsewhere" class="links">
+    {{ with site.GetPage "writing" }}<a href="{{ .RelPermalink }}">Writing</a>{{ end }}
+    {{ range site.Data.social.list }}<a href="{{ .url }}" rel="me">{{ .title }}</a>{{ end }}
+    <button type="button" class="theme-toggle" id="theme" aria-label="Switch to dark mode" title="Switch theme" hidden>
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>

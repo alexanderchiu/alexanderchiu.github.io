@@ -1,0 +1,6 @@
+{{ with site.Data.aboutme }}
+<section id="about" class="block" aria-labelledby="about-h">
+  <h2 id="about-h" class="side">About</h2>
+  <div class="about">{{ .description | $.RenderString (dict "markup" "markdown" "display" "block") }}</div>
+</section>
+{{ end }}

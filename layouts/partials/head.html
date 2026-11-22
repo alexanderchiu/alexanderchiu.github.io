@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  {{ $name := site.Data.profile.name }}
+  {{ $about := index (split site.Data.profile.tagline " | ") 0 }}
+  <title>{{ if .IsHome }}{{ $name }}, {{ $about }}{{ else }}{{ .Title }}, {{ $name }}{{ end }}</title>
+  <meta name="description" content="{{ if and (not .IsHome) (or .Params.summary .Summary) }}{{ .Params.summary | default (.Summary | plainify | truncate 160) }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="{{ if .IsHome }}{{ $name }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}profile{{ end }}">
+  {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $name }}" href="{{ .RelPermalink }}">{{ end }}
+  <link rel="preload" href="{{ "fonts/hanken-grotesk.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  <script src="{{ "js/theme.js" | relURL }}"></script>
+  <script src="{{ "js/clock.js" | relURL }}" defer></script>
+  {{ if site.Params.favicons.use }}{{ site.Params.favicons.metas | safeHTML }}{{ end }}
+</head>

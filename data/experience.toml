@@ -1,0 +1,55 @@
+# Snapshot of the experience text on the live site (alexanderchiu.dev) before the redesign.
+# one-cv's Hugo adapter writes this file from cv.yaml and will overwrite it on the next build.
+
+title = "Experience"
+icon = "fas fa-briefcase fa-fw"
+
+[[list]]
+company = "primer.io"
+dates = "January 2024 - Present"
+positions = [
+    { position = "Staff Engineer", dates = "April 2025 - Present" },
+    { position = "Senior Data Engineer", dates = "January 2024 - March 2025" },
+]
+details = """
+Member of the Data Infrastructure team at Primer – the world’s first Unified Payment Infrastructure that empowers businesses to transform their payment processes. I contribute to building and scaling the internal data platform, enabling teams across the company to easily produce, access, and work with data in an efficient and reliable way.
+
+During this time I served as a technical lead on several data and machine learning initiatives, as well as a guild lead responsible for ensuring our engineering practices stay modern and effective.
+"""
+
+[[list]]
+company = "bol.com"
+dates = "December 2021 - December 2023"
+positions = [
+    { position = "Senior Software Engineer", dates = "July 2022 - December 2023" },
+    { position = "Software Engineer", dates = "December 2021 - June 2022" },
+]
+details = """
+Individual contributor of Help Me Find - a product-led group of scrums teams that make sure customers are able to find the relevant products (and ultimately buy) on the bol platform. I worked on projects that help guide customers such as search suggestions and recommendations, as well as the internal search engine where techniques like neural search and learning-to-rank are combined with traditional information retrieval techniques to improve the relevancy of search.
+
+I was also a member of a company-wide machine learning engineer workgroup where I contributed to best practices to streamline the process of taking machine learning models to production within the bol.com landscape.
+"""
+
+[[list]]
+company = "VASTech"
+positions = [
+    { position = "Senior Engineer", dates = "April 2021 - November 2021" },
+    { position = "Engineer", dates = "March 2019 - March 2021" },
+    { position = "Junior Engineer", dates = "January 2017 - February 2019" },
+]
+details = "Part of a data integration platform team developing distributed and scalable big data solutions for national governments and the international law enforcement community."
+
+[[list]]
+company = "S-PLANE Automation"
+dates = "December 2015"
+positions = [
+    { position = "Internship", dates = "December 2015" },
+]
+details = "Developed a visualisation tool to calculate and display unmanned aerial vehicles' line of sight using geospatial data."
+
+[[list]]
+company = "VASTech"
+positions = [
+    { position = "Internship", dates = "December 2014 - January 2015" },
+]
+details = "Investigated several speech enhancement techniques and implemented an MMSE-STSA speech denoising library in Java."

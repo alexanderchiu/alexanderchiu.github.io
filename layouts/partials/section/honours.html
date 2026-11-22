@@ -1,0 +1,8 @@
+{{ with site.Data.honours.list }}
+<section id="honours" class="block" aria-labelledby="honours-h">
+  <h2 id="honours-h" class="side">Honours</h2>
+  <ul class="roles plain">
+    {{ range . }}<li><span>{{ .title }}, {{ .issuer }}</span> <span class="when">{{ partial "when.html" .dates }}</span></li>{{ end }}
+  </ul>
+</section>
+{{ end }}

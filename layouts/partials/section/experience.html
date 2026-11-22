@@ -1,0 +1,24 @@
+{{ $list := site.Data.experience.list }}
+<section id="work" class="block" aria-labelledby="work-h">
+  <h2 id="work-h" class="side">Work</h2>
+  <div>
+  {{ range first 3 $list }}
+    <article class="entry">
+      <h3>{{ if .url }}<a href="{{ .url }}">{{ .company }}</a>{{ else }}{{ .company }}{{ end }}</h3>
+      <ul class="roles">
+        {{ range .positions }}<li><span>{{ .position }}</span> <span class="when">{{ partial "when.html" .dates }}</span></li>{{ end }}
+      </ul>
+      <div class="detail">{{ .details | $.RenderString (dict "markup" "org" "display" "block") }}</div>
+      {{ with .tech }}<p class="stack">{{ . }}</p>{{ end }}
+    </article>
+  {{ end }}
+  {{ with after 3 $list }}
+    <div class="earlier">
+      <h3>Earlier</h3>
+      <ul class="roles">
+        {{ range . }}{{ $r := index .positions 0 }}<li><span>{{ .company }}, {{ $r.position }}</span> <span class="when">{{ partial "when.html" $r.dates }}</span></li>{{ end }}
+      </ul>
+    </div>
+  {{ end }}
+  </div>
+</section>

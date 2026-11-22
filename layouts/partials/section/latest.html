@@ -1,0 +1,9 @@
+{{ with site.GetPage "writing" }}{{ with .Pages | first 3 }}
+<section id="writing" class="block" aria-labelledby="writing-h">
+  <h2 id="writing-h" class="side">Writing</h2>
+  <div>
+    {{ partial "writing-list.html" . }}
+    <p class="more"><a href="{{ ($.Site.GetPage "writing").RelPermalink }}">All writing</a></p>
+  </div>
+</section>
+{{ end }}{{ end }}
